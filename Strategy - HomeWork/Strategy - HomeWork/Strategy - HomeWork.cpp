@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
@@ -35,13 +35,13 @@ class BreakfastStrategy : public CookingStrategy {
 public:
     void cook(const Fridge& fridge) const override {
         if (fridge.HasProduct(Product::Bread) && fridge.HasProduct(Product::Cheese) && fridge.HasProduct(Product::Ham)) {
-            std::cout << "Making a ham and cheese sandwich for breakfast.\n";
+            cout << "Making a ham and cheese sandwich for breakfast.\n";
         }
         else if (fridge.HasProduct(Product::Egg)) {
-            std::cout << "Making scrambled eggs for breakfast.\n";
+            cout << "Making scrambled eggs for breakfast.\n";
         }
         else {
-            std::cout << "No ingredients for breakfast.\n";
+            cout << "No ingredients for breakfast.\n";
         }
     }
 };
@@ -50,13 +50,13 @@ class LunchStrategy : public CookingStrategy {
 public:
     void cook(const Fridge& fridge) const override {
         if (fridge.HasProduct(Product::Dumplings)) {
-            std::cout << "Cooking dumplings for lunch.\n";
+            cout << "Cooking dumplings for lunch.\n";
         }
         else if (fridge.HasProduct(Product::Tomato) && fridge.HasProduct(Product::Cheese)) {
-            std::cout << "Making a tomato and cheese salad for lunch.\n";
+            cout << "Making a tomato and cheese salad for lunch.\n";
         }
         else {
-            std::cout << "No ingredients for lunch.\n";
+            cout << "No ingredients for lunch.\n";
         }
     }
 };
@@ -65,13 +65,13 @@ class DinnerStrategy : public CookingStrategy {
 public:
     void cook(const Fridge& fridge) const override {
         if (fridge.HasProduct(Product::Bread) && fridge.HasProduct(Product::Mayonnaise) && fridge.HasProduct(Product::Ham)) {
-            std::cout << "Making a ham sandwich for dinner.\n";
+            cout << "Making a ham sandwich for dinner.\n";
         }
         else if (fridge.HasProduct(Product::Dumplings)) {
-            std::cout << "Cooking dumplings for dinner.\n";
+            cout << "Cooking dumplings for dinner.\n";
         }
         else {
-            std::cout << "No ingredients for dinner.\n";
+            cout << "No ingredients for dinner.\n";
         }
     }
 };
@@ -89,7 +89,7 @@ public:
             strategy->cook(fridge);
         }
         else {
-            std::cout << "No cooking strategy set.\n";
+            cout << "No cooking strategy set.\n";
         }
     }
 };
